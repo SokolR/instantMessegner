@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
 
 @XmlRootElement
-public class Message extends Conventer {
+public class Message {
     private String message;
     private Date date;
     private String userName;

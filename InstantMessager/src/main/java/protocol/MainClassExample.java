@@ -9,13 +9,13 @@ public class MainClassExample {
         try {
             //create xml from object (StringWriter)
             Message sendMessage = new Message("Hello", new Date(), "user");
-            StringWriter strb = sendMessage.convertToXML();
+            StringWriter strb = Conventer.convertToXML(sendMessage);
 
-            //create object from xml (StringWriter)
-            Message message = (Message) new Message().convertToObject(strb);
+//            //create object from xml (StringWriter)
+            Message message = (Message) Conventer.convertToObject(new Message(), strb);
             System.out.println(message.getMessage());
 
-            
+
         } catch (JAXBException e) {
             e.printStackTrace();
         }
